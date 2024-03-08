@@ -13,6 +13,7 @@ button {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin: 4px;
   gap: 5;
 }
 .tour_container {

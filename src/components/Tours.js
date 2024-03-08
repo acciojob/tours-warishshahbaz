@@ -1,17 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import Tour from "./Tour";
 
 export default function Tours() {
-  //   useEffect(() => {
-  //     fetch("../data.json")
-  //       .then((response) => response.json())
-  //       .then((data) => console.log(data))
-  //       .catch((err) => console.error(err));
-  //   }, []);
+  const [state, setState] = useState(Data);
+  const handleDelete = (id) => {
+    let res = state.filter((val) => val.id !== id);
+    setState(res);
+  };
   return (
     <div className="main_conatiner">
-      {Data.map((val, i) => {
-        return <Tour key={val.id} val={val} />;
+      {state.map((val, i) => {
+        return <Tour key={val.id} val={val} handleDelete={handleDelete} />;
       })}
     </div>
   );
