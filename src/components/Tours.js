@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Tour from "./Tour";
+import RefreshIcon from "@mui/icons-material/Refresh";
 
 export default function Tours() {
   const [state, setState] = useState(Data);
@@ -7,11 +8,13 @@ export default function Tours() {
     let res = state.filter((val) => val.id !== id);
     setState(res);
   };
+  console.log(state);
   return (
     <div className="main_conatiner">
       {state.map((val, i) => {
         return <Tour key={val.id} val={val} handleDelete={handleDelete} />;
       })}
+      {state.length === 0 && <RefreshIcon />}
     </div>
   );
 }
