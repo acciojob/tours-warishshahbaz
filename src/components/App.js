@@ -54,7 +54,7 @@ function App() {
   const toggleInfo = (id) => {
     setShowInfo({ ...showInfo, [id]: !showInfo[id] });
   };
-  console.log("hii");
+
   if (tours.length === 0) {
     return (
       <main id="main">
