@@ -5,7 +5,6 @@ import Loading from "./loading";
 import Tours from "./Tours";
 require("babel-core/register");
 require("babel-polyfill");
-// import "babel-polyfill";
 
 const url = "https://course-api.com/react-tours-project";
 
