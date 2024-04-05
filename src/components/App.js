@@ -19,7 +19,7 @@ const App = () => {
   useEffect(() => {
     fetchTours();
   }, []);
-
+  console.log("jii");
   const fetchTours = async () => {
     try {
       setLoading(true);
