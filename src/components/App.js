@@ -1,10 +1,7 @@
-"use strict";
 import React, { useState, useEffect } from "react";
-
-import Loading from "./loading";
+import "regenerator-runtime/runtime";
+import Loading from "./Loading";
 import Tours from "./Tours";
-require("babel-core/register");
-require("babel-polyfill");
 
 const url = "https://course-api.com/react-tours-project";
 
@@ -19,7 +16,7 @@ const App = () => {
   useEffect(() => {
     fetchTours();
   }, []);
-  console.log("jii");
+
   const fetchTours = async () => {
     try {
       setLoading(true);
@@ -60,4 +57,5 @@ const App = () => {
     </main>
   );
 };
+
 export default App;
