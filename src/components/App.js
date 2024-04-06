@@ -16,6 +16,7 @@ const App = () => {
   useEffect(() => {
     fetchTours();
   }, []);
+  console.log("Done");
 
   const fetchTours = async () => {
     try {
