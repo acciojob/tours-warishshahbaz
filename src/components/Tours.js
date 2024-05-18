@@ -76,7 +76,6 @@ const Tours = () => {
       return;
     }
   }
-  console.log("jskdsad");
 
   return (
     <div>
